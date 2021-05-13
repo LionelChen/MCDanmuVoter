@@ -1,0 +1,5 @@
+name: BiliDanmuVoter
+version: 1.0.0
+main: ink.imimi.BiliDanmuVoter.BiliDanmuVoter
+load: STARTUP
+api-version: 1.16
