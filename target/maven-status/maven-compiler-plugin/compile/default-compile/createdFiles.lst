@@ -21,11 +21,14 @@ com/ggemo/va/bililivedanmakuoop/cmddata/DanmakuData.class
 com/ggemo/va/bililivedanmakuoop/handler/SuperChatHandler.class
 com/ggemo/va/bililivedanmakuoop/cmddataprocessor/SuperChatCmdDataProcessor.class
 com/ggemo/va/bililivedanmakuoop/cmddata/SendGiftData.class
+ink/imimi/BiliDanmuVoter/RandomEvent.class
 com/ggemo/va/bililivedanmakuoop/util/StringUtil.class
+ink/imimi/BiliDanmuVoter/RandomEventScheduler.class
 com/ggemo/va/bililivedanmakuoop/cmddata/SendGiftData$ComboSend.class
 com/ggemo/va/bililivedanmakuoop/cmddataprocessor/SendGiftCmdDataProcessor.class
 com/ggemo/va/bililivedanmakuoop/cmddata/DanmakuData$UserMedal.class
 ink/imimi/BiliDanmuVoter/DanmuClientThread$3.class
+ink/imimi/BiliDanmuVoter/CommandVote.class
 com/ggemo/va/bililivedanmakuoop/cmddata/DanmakuData$UserInfo.class
 com/ggemo/va/bililivedanmakuoop/cmddata/SendGiftData$SendMaster.class
 ink/imimi/BiliDanmuVoter/DanmuClientThread$5.class

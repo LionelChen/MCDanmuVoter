@@ -6,6 +6,8 @@ import com.ggemo.va.bilidanmakuclient.handler.CmdHandler;
 import com.ggemo.va.bilidanmakuclient.handler.HandlerHolder;
 import com.ggemo.va.bilidanmakuclient.handler.UserCountHandler;
 
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
@@ -41,7 +43,9 @@ public class BiliDanmuVoter extends JavaPlugin implements Listener {
     public void onEnable() {
         getLogger().info("onEnable is called!");
         getServer().getPluginManager().registerEvents(this, this);
-        simplePrintTest();
+        //simplePrintTest();
+        this.getCommand("vote").setExecutor(new CommandVote());
+        new RandomEventScheduler(this);
     }
     @Override
     public void onDisable() {
@@ -52,7 +56,8 @@ public class BiliDanmuVoter extends JavaPlugin implements Listener {
 
     public void simplePrintTest() {
 
-        DanmuClientThread mythread = new DanmuClientThread();
+        Bukkit.getServer().broadcastMessage(ChatColor.RED + "Outside");
+        DanmuClientThread mythread = new DanmuClientThread(Bukkit.getServer());
         mythread.start();
     }
 

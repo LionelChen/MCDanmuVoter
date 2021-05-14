@@ -79,7 +79,11 @@
 
 
 
-
+        <dependency>
+            <groupId>fr.minuskube</groupId>
+            <artifactId>netherboard-bukkit</artifactId>
+            <version>1.2.1</version>
+        </dependency>
 
     </dependencies>
 
