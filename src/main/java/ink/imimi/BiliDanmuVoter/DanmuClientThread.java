@@ -12,15 +12,21 @@ import com.ggemo.va.bililivedanmakuoop.handler.*;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Server;
+import org.bukkit.scoreboard.Score;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class DanmuClientThread extends Thread {
     private static Server bukkit_server;
+    private List<Score> optionList = new ArrayList<Score>();
 
-    public DanmuClientThread(Server bukkit_server){
+    public DanmuClientThread(Server bukkit_server, List<Score> optionList){
         this.bukkit_server = bukkit_server;
+        this.optionList = optionList;
     }
 
-    public static void oopPrint(long roomId) {
+    public void oopPrint(long roomId) {
         // OopCmdHandler实现了CmdHandler接口, 本质是将事件字符串转换为对应对象
         OopCmdHandler oopCmdHandler = new OopCmdHandler(roomId);
 
@@ -31,6 +37,9 @@ public class DanmuClientThread extends Thread {
                 //getLogger().info(x.getContent());
                 //System.out.println(x.getContent());
                 bukkit_server.broadcastMessage(ChatColor.AQUA + "弹幕:" + x.getContent() );
+                if (x.getContent().equals("1")){
+                    optionList.get(0).setScore(optionList.get(0).getScore()+1);
+                }
             }
         });
 
@@ -104,7 +113,6 @@ public class DanmuClientThread extends Thread {
     public void run()
     {
         long roomId = 22348429L;
-        bukkit_server.broadcastMessage(ChatColor.RED + "inside");
-        //oopPrint(roomId);
+        oopPrint(roomId);
     }
 }

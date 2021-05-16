@@ -44,23 +44,12 @@ public class BiliDanmuVoter extends JavaPlugin implements Listener {
         getLogger().info("onEnable is called!");
         getServer().getPluginManager().registerEvents(this, this);
         //simplePrintTest();
-        this.getCommand("vote").setExecutor(new CommandVote());
-        new RandomEventScheduler(this);
+        this.getCommand("vote").setExecutor(new CommandVote(this));
     }
     @Override
     public void onDisable() {
         getLogger().info("onDisable is called!");
     }
-
-
-
-    public void simplePrintTest() {
-
-        Bukkit.getServer().broadcastMessage(ChatColor.RED + "Outside");
-        DanmuClientThread mythread = new DanmuClientThread(Bukkit.getServer());
-        mythread.start();
-    }
-
 
 
 

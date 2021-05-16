@@ -32,6 +32,7 @@ ink/imimi/BiliDanmuVoter/CommandVote.class
 com/ggemo/va/bililivedanmakuoop/cmddata/DanmakuData$UserInfo.class
 com/ggemo/va/bililivedanmakuoop/cmddata/SendGiftData$SendMaster.class
 ink/imimi/BiliDanmuVoter/DanmuClientThread$5.class
+ink/imimi/BiliDanmuVoter/Event.class
 com/ggemo/va/bililivedanmakuoop/cmddata/DanmakuData$UserLevel.class
 com/ggemo/va/bililivedanmakuoop/cmddata/SuperChatData.class
 ink/imimi/BiliDanmuVoter/DanmuClientThread.class
