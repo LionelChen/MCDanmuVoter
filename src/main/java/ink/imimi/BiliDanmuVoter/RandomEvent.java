@@ -1,5 +1,7 @@
 package ink.imimi.BiliDanmuVoter;
 
+import ink.imimi.BiliDanmuVoter.Events.DoubleHealthEvent;
+import ink.imimi.BiliDanmuVoter.Events.RandomDropEvent;
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -18,13 +20,15 @@ public class RandomEvent extends BukkitRunnable {
     public RandomEvent(JavaPlugin plugin, int counter) {
         this.plugin = plugin;
         this.counter = counter;
+        Double Duration1m = 1200D;
+        Double Duration10s = 200D;
 
-        Event doubleHealth = new Event("双倍血量");
+        Event doubleHealth = new DoubleHealthEvent("双倍血量", Duration10s, plugin);
         randomEventList.add(doubleHealth);
-        Event randomDrop = new Event("随机掉落");
+        Event randomDrop = new RandomDropEvent("随机掉落", Duration10s, plugin);
         randomEventList.add(randomDrop);
-        Event testEvent1 = new Event("Test Event 1");
-        Event testEvent2 = new Event("Test Event 2");
+        Event testEvent1 = new DoubleHealthEvent("Test Event 1", Duration10s, plugin);
+        Event testEvent2 = new RandomDropEvent("Test Event 2", Duration10s, plugin);
         randomEventList.add(testEvent1);
         randomEventList.add(testEvent2);
     }
@@ -58,6 +62,7 @@ public class RandomEvent extends BukkitRunnable {
 
             DanmuClientThread mythread = new DanmuClientThread(Bukkit.getServer(),optionList);
             mythread.start();
+            randomEventList.get(0).StartEvent();
 
 
         }

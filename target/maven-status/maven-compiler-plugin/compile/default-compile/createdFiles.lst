@@ -1,8 +1,10 @@
 com/ggemo/va/bililivedanmakuoop/handler/SendGiftHandler.class
+ink/imimi/BiliDanmuVoter/Events/DoubleHealthEvent.class
 com/ggemo/va/bililivedanmakuoop/cmddata/CmdData.class
 ink/imimi/BiliDanmuVoter/DanmuClientThread$2.class
 com/ggemo/va/bililivedanmakuoop/cmddata/SuperChatData$UserInfo.class
 com/ggemo/va/bililivedanmakuoop/handler/AbstractHandler.class
+ink/imimi/BiliDanmuVoter/Events/RandomDropEvent.class
 ink/imimi/BiliDanmuVoter/BiliDanmuVoter.class
 ink/imimi/BiliDanmuVoter/DanmuClientThread$4.class
 com/ggemo/va/bililivedanmakuoop/handler/OopCmdHandler$1.class
@@ -32,6 +34,7 @@ ink/imimi/BiliDanmuVoter/CommandVote.class
 com/ggemo/va/bililivedanmakuoop/cmddata/DanmakuData$UserInfo.class
 com/ggemo/va/bililivedanmakuoop/cmddata/SendGiftData$SendMaster.class
 ink/imimi/BiliDanmuVoter/DanmuClientThread$5.class
+ink/imimi/BiliDanmuVoter/Events/DoubleHealthEvent$1.class
 ink/imimi/BiliDanmuVoter/Event.class
 com/ggemo/va/bililivedanmakuoop/cmddata/DanmakuData$UserLevel.class
 com/ggemo/va/bililivedanmakuoop/cmddata/SuperChatData.class
